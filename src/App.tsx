@@ -1,5 +1,9 @@
 import React, { useState } from "react";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { Container, AppBar } from "@material-ui/core";
 import "./App.css";
+import Home from "./components/index";
+import CssBaseline from "@material-ui/core/CssBaseline";
 
 function App() {
 	const [state, setState] = useState({
@@ -23,10 +27,11 @@ function App() {
 	});
 
 	return (
-		<>
-			<h1> the title of this page is: {state.title}</h1>
-			<div className="App">This is my portfolio</div>;
-		</>
+		<Router>
+			<CssBaseline>
+				<Home />
+			</CssBaseline>
+		</Router>
 	);
 }
 
