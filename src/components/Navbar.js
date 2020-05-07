@@ -24,14 +24,16 @@ import {
 
 import { makeStyles } from "@material-ui/core/styles";
 
+import MenuDrawerSlider from "@material-ui/core/Drawer";
+
 import avatar from "../images/Boone.png";
 
 // CSS STYLES
 const useStyles = makeStyles((theme) => ({
 	menuSliderContainer: {
-		width: 250,
+		width: "100%",
 		background: "#511",
-		height: "30rem",
+		height: "100%",
 	},
 	avatar: {
 		display: "block",
@@ -62,37 +64,50 @@ const menuIcons = [
 
 const Navbar = () => {
 	const classes = useStyles();
+	const [state, setState] = useState({ right: false });
 
+	const toggleSlider = (slider, open) => () => {
+		setState({ ...state, [slider]: open });
+	};
+	const sideList = (slider) => (
+		<Box className={classes.menuSliderContainer} component="div">
+			<Avatar
+				className={classes.avatar}
+				src={avatar}
+				alt="cute pitbull"
+			/>
+			<Divider />
+			<List>
+				{menuIcons.map((menuIcon, key) => (
+					<ListItem button key={key}>
+						<ListItemIcon style={{ color: "grey" }}>
+							{menuIcon.listIcon}
+						</ListItemIcon>
+						<ListItemText
+							primary={menuIcon.listText}
+							style={{ color: "white" }}
+						/>
+					</ListItem>
+				))}
+			</List>
+		</Box>
+	);
 	return (
 		<>
-			<Box className={classes.menuSliderContainer} component="div">
-				<Avatar
-					className={classes.avatar}
-					src={avatar}
-					alt="cute pitbull"
-				/>
-				<Divider />
-				<List>
-					{menuIcons.map((menuIcon, key) => (
-						<ListItem button key={key}>
-							<ListItemIcon style={{ color: "grey" }}>
-								{menuIcon.listIcon}
-							</ListItemIcon>
-							<ListItemText
-								primary={menuIcon.listText}
-								style={{ color: "white" }}
-							/>
-						</ListItem>
-					))}
-				</List>
-			</Box>
 			<Box component="nav">
 				<AppBar position="static" style={{ background: "#222" }}>
 					<Toolbar>
-						<IconButton>
+						<IconButton onClick={toggleSlider("right", true)}>
 							<ArrowBack style={{ color: "tomato" }} />
 						</IconButton>
-						<Typography variant="h5">Portfolio </Typography>
+						<Typography variant="h5">Portfolio</Typography>
+						<MenuDrawerSlider
+							anchor="right"
+							open={state.right}
+							onClose={toggleSlider("right", false)}
+						>
+							{sideList("right")}
+						</MenuDrawerSlider>
 					</Toolbar>
 				</AppBar>
 			</Box>
