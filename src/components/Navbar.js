@@ -14,13 +14,9 @@ import {
 	Box,
 } from "@material-ui/core";
 
-import {
-	ArrowBack,
-	AssignmentInd,
-	Home,
-	Apps,
-	ContactMail,
-} from "@material-ui/icons";
+import { AssignmentInd, Home, Apps, ContactMail } from "@material-ui/icons";
+
+import MenuIcon from "@material-ui/icons/Menu";
 
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -70,7 +66,11 @@ const Navbar = () => {
 		setState({ ...state, [slider]: open });
 	};
 	const sideList = (slider) => (
-		<Box className={classes.menuSliderContainer} component="div">
+		<Box
+			className={classes.menuSliderContainer}
+			component="div"
+			onClick={toggleSlider(slider, false)}
+		>
 			<Avatar
 				className={classes.avatar}
 				src={avatar}
@@ -80,13 +80,15 @@ const Navbar = () => {
 			<List>
 				{menuIcons.map((menuIcon, key) => (
 					<ListItem button key={key}>
-						<ListItemIcon style={{ color: "grey" }}>
-							{menuIcon.listIcon}
-						</ListItemIcon>
-						<ListItemText
-							primary={menuIcon.listText}
-							style={{ color: "white" }}
-						/>
+						<IconButton>
+							<ListItemIcon style={{ color: "grey" }}>
+								{menuIcon.listIcon}
+							</ListItemIcon>
+							<ListItemText
+								primary={menuIcon.listText}
+								style={{ color: "white" }}
+							/>
+						</IconButton>
 					</ListItem>
 				))}
 			</List>
@@ -98,11 +100,11 @@ const Navbar = () => {
 				<AppBar position="static" style={{ background: "#222" }}>
 					<Toolbar>
 						<IconButton onClick={toggleSlider("right", true)}>
-							<ArrowBack style={{ color: "tomato" }} />
+							<MenuIcon style={{ color: "tomato" }} />
 						</IconButton>
 						<Typography variant="h5">Portfolio</Typography>
 						<MenuDrawerSlider
-							anchor="right"
+							anchor="left"
 							open={state.right}
 							onClose={toggleSlider("right", false)}
 						>
