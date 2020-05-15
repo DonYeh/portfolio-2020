@@ -15,10 +15,10 @@ const useStyles = makeStyles((theme) => ({
 		// width: "100%",
 		// margin: "auto",
 		// width: theme.spacing(12),
-		height: theme.spacing(9),
+		height: "20vh",
 		// margin:
 		// backgroundColor: "white",
-		margin: "30px 0px 0px 0px",
+		// margin: "30px 0px 0px 0px",
 		// backgroundColor: "red",
 		// textAlign: "center",
 
@@ -26,8 +26,8 @@ const useStyles = makeStyles((theme) => ({
 	},
 	avatar: {
 		textAlign: "center",
-		width: theme.spacing(10),
-		height: theme.spacing(10),
+		width: theme.spacing(14),
+		height: theme.spacing(14),
 		// margin: theme.spacing(6),
 		// textAlign: "center",
 		// border: "black",
@@ -51,11 +51,13 @@ const useStyles = makeStyles((theme) => ({
 	// 	zIndex: 1,
 	// },
 	typedContainer: {
-		margin: theme.spacing(7),
+		// margin: theme.spacing(8),
 		textAlign: "center",
+		height: "80vh",
 	},
 	whiteFont: {
 		color: "white",
+		marginTop: "20%",
 		// textAlign: "flex-start",
 		// backgroundColor: "blue",
 
@@ -82,18 +84,27 @@ const Header = () => {
 					lg={4}
 					container
 					justify="center"
+					alignContent="flex-end"
 					// textAlign="center"
 					className={classes.avatarContainer}
+					// style={{ background: "purple" }}
 				>
 					<Avatar
 						src={avatar}
 						alt="Doggie"
 						className={classes.avatar}
-						style={{}}
+						// style={{ paddingTop: ".5em" }}
 					/>
 				</Grid>
 
-				<Grid item xs={12} lg={8} className={classes.typedContainer}>
+				<Grid
+					item
+					xs={12}
+					sm={12}
+					lg={8}
+					className={classes.typedContainer}
+					// style={{ background: "brown" }}
+				>
 					<Typography variant="h4" className={classes.whiteFont}>
 						<Typed
 							strings={["Hello^2", "Hi!^4 👋", "I'm Donald^5"]}
