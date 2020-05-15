@@ -4,32 +4,18 @@ import { Container, AppBar } from "@material-ui/core";
 import "./App.css";
 import Home from "./components/index";
 import CssBaseline from "@material-ui/core/CssBaseline";
+import Resume from "./components/Resume";
+import Portfolio from "./components/Portfolio";
+import Contact from "./components/Contact";
 
 function App() {
-	const [state, setState] = useState({
-		title: "Donald Yeh",
-		navLinks: [
-			{ title: "Home", path: "/" },
-			{ title: "About", path: "/about" },
-			{ title: "Contact", path: "/contact" },
-		],
-		home: {
-			title: "Wash your hands!",
-			subTitle: "Welcome to my portfolio",
-			text: "Checkout my projects below",
-		},
-		about: {
-			title: "About Me",
-		},
-		contact: {
-			title: "Let's talk",
-		},
-	});
-
 	return (
 		<Router>
 			<CssBaseline>
-				<Home />
+				<Route exact path="/" component={Home} />
+				<Route path="/resume" component={Resume} />
+				<Route path="/portfolio" component={Portfolio} />
+				<Route path="/contact" component={Contact} />
 			</CssBaseline>
 		</Router>
 	);
