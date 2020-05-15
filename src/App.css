@@ -38,10 +38,10 @@
 }
 
 body {
-	/* background: url(./images/keyboardHeroPic1.jpg) no-repeat center center fixed; */
-	background-position: center center;
-	color: black;
-	background-size: fit;
+	background: url(./images/Atlant.jpg) no-repeat center center fixed;
+	background-position: center center top;
+	/* color: white; */
+	background-size: cover;
 	background-color: #282c34;
 	-moz-background: cover;
 	-o-background: cover;
