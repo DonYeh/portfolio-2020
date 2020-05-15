@@ -23,12 +23,13 @@ import { makeStyles } from "@material-ui/core/styles";
 import MenuDrawerSlider from "@material-ui/core/Drawer";
 
 import avatar from "../images/Boone.png";
+import { Link } from "react-router-dom";
 
 // CSS STYLES
 const useStyles = makeStyles((theme) => ({
 	menuSliderContainer: {
 		width: "100%",
-		background: "#511",
+		background: "darkgrey",
 		height: "100%",
 	},
 	avatar: {
@@ -54,7 +55,7 @@ const menuIcons = [
 	},
 	{
 		listIcon: <ContactMail />,
-		listText: "Contact me",
+		listText: "Contact",
 	},
 ];
 
@@ -71,12 +72,12 @@ const Navbar = () => {
 			component="div"
 			onClick={toggleSlider(slider, false)}
 		>
-			<Avatar
+			{/* <Avatar
 				className={classes.avatar}
 				src={avatar}
 				alt="cute pitbull"
 			/>
-			<Divider />
+			<Divider /> */}
 			<List>
 				{menuIcons.map((menuIcon, key) => (
 					<ListItem button key={key}>
@@ -100,7 +101,7 @@ const Navbar = () => {
 				<AppBar position="static" style={{ background: "#222" }}>
 					<Toolbar>
 						<IconButton onClick={toggleSlider("right", true)}>
-							<MenuIcon style={{ color: "tomato" }} />
+							<MenuIcon style={{ color: "darkgrey" }} />
 						</IconButton>
 						<Typography variant="h5">Portfolio</Typography>
 						<MenuDrawerSlider

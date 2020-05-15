@@ -54,10 +54,11 @@ const useStyles = makeStyles((theme) => ({
 		// margin: theme.spacing(8),
 		textAlign: "center",
 		height: "80vh",
+		// padding: "0 10%",
 	},
 	whiteFont: {
 		color: "white",
-		marginTop: "20%",
+		marginTop: "10%",
 		// textAlign: "flex-start",
 		// backgroundColor: "blue",
 
@@ -128,7 +129,6 @@ const Header = () => {
 							startDelay={6500}
 							backSpeed={22}
 							smartBackspace="true"
-							placeholder="coder"
 							random
 							loop
 							showCursor={false}
@@ -150,14 +150,14 @@ const Header = () => {
 
 					{/* <br /> */}
 
-					<Typography variant="h4" zeroMinWidth>
+					<Typography variant="h4">
 						<Typed
 							strings={[
 								// "Atlanta^1800",
 								"ATL^900",
 								"A-Town^900",
 								"the A^900",
-								"Hotlanta^400...(please don't call it Hotlanta)^650",
+								"Hotlanta^400...(please don't ever call it Hotlanta)^650",
 								"Atlanta^1800",
 							]}
 							typeSpeed={11}
