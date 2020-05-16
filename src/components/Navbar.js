@@ -29,7 +29,7 @@ import { Link } from "react-router-dom";
 const useStyles = makeStyles((theme) => ({
 	menuSliderContainer: {
 		width: "100%",
-		background: "darkgrey",
+		background: "rgba(0,0,0,.5)", //don't think this is working
 		height: "100%",
 	},
 	avatar: {
@@ -118,14 +118,16 @@ const Navbar = () => {
 						component={Link}
 						to={menuIcon.listPath}
 					>
-						<IconButton>
-							<ListItemIcon style={{ color: "grey" }}>
+						<IconButton
+							style={{
+								color: "white",
+								// background: "black",
+							}}
+						>
+							<ListItemIcon color="primary">
 								{menuIcon.listIcon}
 							</ListItemIcon>
-							<ListItemText
-								primary={menuIcon.listText}
-								style={{ color: "white" }}
-							/>
+							<ListItemText primary={menuIcon.listText} />
 						</IconButton>
 					</ListItem>
 				))}

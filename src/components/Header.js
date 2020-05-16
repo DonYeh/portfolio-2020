@@ -76,7 +76,8 @@ const Header = () => {
 				container
 				spacing={2}
 				className={classes.mainContainer}
-				margin="dense"
+				// margin="dense"
+				// justifyContent="center"
 			>
 				<Grid
 					item
@@ -178,7 +179,7 @@ const Header = () => {
 						<Typed
 							strings={["Georgia^60 🍑"]}
 							typeSpeed={11}
-							startDelay={16700}
+							startDelay={16200}
 							backSpeed={55}
 							showCursor={false}
 							className={classes.whiteFont}
