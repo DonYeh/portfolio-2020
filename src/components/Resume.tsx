@@ -12,6 +12,11 @@ const useStyles = makeStyles((theme) => ({
 		padding: "3rem 0",
 		textTransform: "uppercase",
 	},
+	subHeading2: {
+		color: "antiquewhite",
+		padding: "0",
+		// textTransform: "upper"
+	},
 	subHeading: {
 		color: "white",
 		padding: "0",
@@ -58,7 +63,7 @@ const useStyles = makeStyles((theme) => ({
 			right: "-0.625rem",
 			top: "calc(50% - 5px)",
 			borderStyle: "solid",
-			borderColor: "tomato tomato transparent transparent",
+			borderColor: "orange orange transparent transparent",
 			borderWidth: "0.625rem",
 			transform: "rotate(45deg)",
 		},
@@ -73,7 +78,7 @@ const useStyles = makeStyles((theme) => ({
 			"&:nth-of-type(2n):before": {
 				right: "auto",
 				left: "-0.625rem",
-				borderColor: "transparent transparent tomato tomato",
+				borderColor: "transparent transparent orange orange",
 			},
 		},
 	},
@@ -136,7 +141,14 @@ const Resume = () => {
 						>
 							Digital Crafts
 						</Typography>
-
+						<Typography
+							variant="h6"
+							align="center"
+							className={classes.subHeading2}
+							// style="{{ color: "tan"}}
+						>
+							Web Development Bootcamp
+						</Typography>
 						<Typography
 							variant="body1"
 							align="center"
@@ -167,7 +179,14 @@ const Resume = () => {
 						>
 							Georgia Institute of Technology
 						</Typography>
-
+						<Typography
+							variant="h6"
+							align="center"
+							className={classes.subHeading2}
+							// style="{{ color: "tan"}}
+						>
+							Scheller College of Business
+						</Typography>
 						<Typography
 							variant="body1"
 							align="center"
@@ -200,6 +219,15 @@ const Resume = () => {
 						</Typography>
 
 						<Typography
+							variant="h6"
+							align="center"
+							className={classes.subHeading2}
+							// style="{{ color: "tan"}}
+						>
+							School of Electrical and Computer Engineering
+						</Typography>
+
+						<Typography
 							variant="body1"
 							align="center"
 							style={{ color: "cadetblue" }}
@@ -212,7 +240,7 @@ const Resume = () => {
 							align="center"
 							style={{ color: "grey" }}
 						>
-							Bachelor of Electrical Engineering
+							Bachelor of Science in Electrical Engineering
 						</Typography>
 					</Box>
 				</Box>
