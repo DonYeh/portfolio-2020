@@ -124,9 +124,7 @@ const Navbar = () => {
 								// background: "black",
 							}}
 						>
-							<ListItemIcon color="primary">
-								{menuIcon.listIcon}
-							</ListItemIcon>
+							<ListItemIcon>{menuIcon.listIcon}</ListItemIcon>
 							<ListItemText primary={menuIcon.listText} />
 						</IconButton>
 					</ListItem>
@@ -140,7 +138,7 @@ const Navbar = () => {
 				<AppBar position="static" style={{ background: "#222" }}>
 					<Toolbar>
 						<IconButton onClick={toggleSlider("right", true)}>
-							<MenuIcon style={{ color: "darkgrey" }} />
+							<MenuIcon style={{ color: "sandybrown" }} />
 						</IconButton>
 						<Typography variant="h5">Portfolio</Typography>
 						<MenuDrawerSlider
