@@ -7,25 +7,30 @@ import avatar from "../images/Boone.png";
 const useStyles = makeStyles((theme) => ({
 	mainContainer: {
 		backgroundColor: "white",
-		padding: "1.2rem",
+		padding: "1.5rem",
+		margin: "1.5rem",
 	},
 	gridContainer: {
 		display: "flex",
-		// justify: "center",
+		justify: "center",
 		alignItems: "center",
 	},
 	gridItems: {
 		padding: "5rem",
 	},
-	gridItems1: {},
+	gridItems1: {
+		justifyContent: "space-evenly",
+		padding: "1rem",
+	},
 	paper: {
 		padding: "1rem",
+		justifyContent: "space-evenly",
 	},
 	avatarContainer: {
 		// width: "100%",
 		// margin: "auto",
 		// width: theme.spacing(12),
-		height: "20vh",
+		height: "18vh",
 		// margin:
 		// backgroundColor: "white",
 		// margin: "30px 0px 0px 0px",
@@ -65,17 +70,20 @@ const About = () => {
 						spacing={2}
 					>
 						<Grid item>
-							<Paper elevation={5} className={classes.paper}>
-								<Typography variant="h4">About Me</Typography>
+							<Paper elevation={4} className={classes.paper}>
+								<Typography variant="h6">About Me</Typography>
 							</Paper>
 						</Grid>
-						<Grid>
-							<Avatar
-								src={avatar}
-								alt="Doggie"
-								className={classes.avatar}
-								// style={{ paddingTop: ".5em" }}
-							/>
+						<Grid item>
+							<Paper elevation={3}>
+								<Avatar
+									src={avatar}
+									alt="Doggie"
+									className={classes.avatar}
+									variant="rounded"
+									// style={{ paddingTop: ".5em" }}
+								/>
+							</Paper>
 						</Grid>
 					</Grid>
 
