@@ -290,7 +290,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 	experienceBox: {
 		paddingTop: "1.2rem",
-		paddingBottom: "6rem",
+		paddingBottom: "2.5rem",
 		backgroundColor: "white",
 		textTransform: "uppercase",
 		color: "#234",
@@ -489,7 +489,7 @@ const Resume = () => {
 									className={classes.paper}
 									// square
 								>
-									html
+									html5
 								</Paper>
 							</Grid>
 							<Grid item xs={4} sm={4} md={4}>
@@ -499,7 +499,7 @@ const Resume = () => {
 									className={classes.paper}
 									// square
 								>
-									css
+									css3
 								</Paper>
 							</Grid>
 							<Grid item xs={4} sm={4} md={4}>
@@ -509,7 +509,7 @@ const Resume = () => {
 									className={classes.paper}
 									// square
 								>
-									html5
+									Js
 								</Paper>
 							</Grid>
 							<Grid item xs={4} sm={4} md={4}>
@@ -519,7 +519,7 @@ const Resume = () => {
 									className={classes.paper}
 									// square
 								>
-									css
+									Ts
 								</Paper>
 							</Grid>
 							<Grid item xs={4} sm={4} md={4}>
@@ -529,7 +529,7 @@ const Resume = () => {
 									className={classes.paper}
 									// square
 								>
-									html
+									React
 								</Paper>
 							</Grid>
 							<Grid item xs={4} sm={4} md={4}>
@@ -539,7 +539,7 @@ const Resume = () => {
 									className={classes.paper}
 									// square
 								>
-									css
+									React Native
 								</Paper>
 							</Grid>
 							<Grid item xs={4} sm={4} md={4}>
@@ -549,7 +549,7 @@ const Resume = () => {
 									className={classes.paper}
 									// square
 								>
-									html
+									Angular
 								</Paper>
 							</Grid>
 							<Grid item xs={4} sm={4} md={4}>
@@ -559,7 +559,7 @@ const Resume = () => {
 									className={classes.paper}
 									// square
 								>
-									css
+									Material-UI
 								</Paper>
 							</Grid>
 						</Grid>
@@ -632,7 +632,27 @@ const Resume = () => {
 									className={classes.paper}
 									// square
 								>
-									html
+									GraphQL
+								</Paper>
+							</Grid>
+							<Grid item xs={4} sm={4} md={4}>
+								<Paper
+									elevation={2}
+									variant="outlined"
+									className={classes.paper}
+									// square
+								>
+									WebSockets
+								</Paper>
+							</Grid>
+							<Grid item xs={4} sm={4} md={4}>
+								<Paper
+									elevation={2}
+									variant="outlined"
+									className={classes.paper}
+									// square
+								>
+									NGINX
 								</Paper>
 							</Grid>
 						</Grid>
@@ -674,7 +694,7 @@ const Resume = () => {
 									className={classes.paper}
 									// square
 								>
-									html
+									NPM
 								</Paper>
 							</Grid>
 							<Grid item xs={4} sm={4} md={4}>
@@ -694,6 +714,26 @@ const Resume = () => {
 									className={classes.paper}
 									// square
 								>
+									GitHub
+								</Paper>
+							</Grid>
+							<Grid item xs={4} sm={4} md={4}>
+								<Paper
+									elevation={2}
+									variant="outlined"
+									className={classes.paper}
+									// square
+								>
+									Jasmine
+								</Paper>
+							</Grid>
+							<Grid item xs={4} sm={4} md={4}>
+								<Paper
+									elevation={2}
+									variant="outlined"
+									className={classes.paper}
+									// square
+								>
 									Mocha
 								</Paper>
 							</Grid>
@@ -704,21 +744,11 @@ const Resume = () => {
 									className={classes.paper}
 									// square
 								>
-									css
+									Webpack
 								</Paper>
 							</Grid>
 
-							<Grid item xs={4} sm={4} md={4}>
-								<Paper
-									elevation={2}
-									variant="outlined"
-									className={classes.paper}
-									// square
-								>
-									css
-								</Paper>
-							</Grid>
-							<Grid item xs={4} sm={4} md={4}>
+							{/* <Grid item xs={4} sm={4} md={4}>
 								<Paper
 									elevation={2}
 									variant="outlined"
@@ -727,7 +757,7 @@ const Resume = () => {
 								>
 									html
 								</Paper>
-							</Grid>
+							</Grid> */}
 						</Grid>
 						{/* </Grid> */}
 					</Grid>
