@@ -49,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
 		"&:before": {
 			content: "''",
 			position: "absolute",
-			height: "88%",
+			height: "86%",
 			border: "1px solid lightgrey ",
 			right: "40px",
 			// top: "24px",
@@ -151,7 +151,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 	timeLineBoxE: {
 		postion: "relative",
-		transform: "translate(0px, 1.5rem)",
+		transform: "translate(0px, 1.0rem)",
 
 		padding: ".5rem",
 		margin: "0 auto",
@@ -286,13 +286,29 @@ const useStyles = makeStyles((theme) => ({
 		textOverflow: "ellipsis",
 		// width: "1rem",
 	},
-
 	experienceBox: {
 		paddingTop: "1.2rem",
-		paddingBottom: "18rem",
+		paddingBottom: "6rem",
 		backgroundColor: "white",
 		textTransform: "uppercase",
 		color: "#234",
+		[theme.breakpoints.up("md")]: {
+			paddingBottom: "18rem",
+
+			// "&:before": {
+			// 	transform: "translate(0px, 5rem)",
+			// 	height: "78%",
+			// 	left: "calc(50% - 1px)",
+			// 	right: "auto",
+			// 	// zIndex: "-1",
+			// },
+			// "&:after": {
+			// 	content: "''",
+			// 	height: "15%",
+			// 	clear: "both",
+			// 	// zIndex: "-1",
+			// },
+		},
 	},
 }));
 

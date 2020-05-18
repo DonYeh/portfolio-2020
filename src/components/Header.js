@@ -56,7 +56,7 @@ const useStyles = makeStyles((theme) => ({
 		textAlign: "center",
 		height: "80vh",
 		// padding: "0 10%",
-		[theme.breakpoints.up("md")]: {
+		[theme.breakpoints.up("lg")]: {
 			alignItems: "center",
 			fontSize: "8em",
 		},
