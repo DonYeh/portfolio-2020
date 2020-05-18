@@ -8,7 +8,7 @@ const useStyles = makeStyles((theme) => ({
 	mainContainer: {
 		backgroundColor: "white",
 		padding: "1.5rem",
-		margin: "1.5rem",
+		margin: "1.2rem",
 	},
 	gridContainer: {
 		display: "flex",
@@ -20,6 +20,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 	gridItems1: {
 		justifyContent: "space-evenly",
+		alignItems: "center",
 		padding: "1rem",
 	},
 	paper: {
@@ -41,8 +42,8 @@ const useStyles = makeStyles((theme) => ({
 	},
 	avatar: {
 		textAlign: "center",
-		width: theme.spacing(14),
-		height: theme.spacing(14),
+		width: theme.spacing(12),
+		height: theme.spacing(12),
 		// margin: theme.spacing(6),
 		// textAlign: "center",
 		// border: "black",
@@ -75,7 +76,7 @@ const About = () => {
 							</Paper>
 						</Grid>
 						<Grid item>
-							<Paper elevation={3}>
+							<Paper elevation={4}>
 								<Avatar
 									src={avatar}
 									alt="Doggie"
@@ -90,7 +91,6 @@ const About = () => {
 					<Grid item className={classes.gridItems}>
 						<Paper elevation={3} className={classes.paper}>
 							<Typography>
-								{" "}
 								Hello. I’m a full-stack developer who is
 								passionate about writing clean, efficient code
 								and solving real world problems - making the
@@ -99,11 +99,23 @@ const About = () => {
 							</Typography>
 						</Paper>
 					</Grid>
+					<Grid item className={classes.gridItems}>
+						<Paper elevation={3} className={classes.paper}>
+							<Typography>
+								I enjoy turning complex problems into simple,
+								beautiful and intuitive designs. I love to build
+								things and I'm obsessed with making things
+								better. I have a thirst for knowlede and coding
+								really quenches my desire to learn.
+							</Typography>
+						</Paper>
+					</Grid>
 
 					<Grid item className={classes.gridItems}>
 						<Paper elevation={3} className={classes.paper}>
 							<Typography>
-								When Im not at the computer, you can find me in
+								When Im not at the computer, you can find me
+								cooking something fierce in the kitchen, out in
 								the garden, or out walking my dogs.
 							</Typography>
 						</Paper>
