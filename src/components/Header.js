@@ -9,7 +9,7 @@ import { ViewColumn } from "@material-ui/icons";
 const useStyles = makeStyles((theme) => ({
 	mainContainer: {
 		// direction: "column",
-		alignContent: "flex-start",
+		alignContent: "center",
 	},
 	// avatarContainer: {
 	// width: "100%",
@@ -52,7 +52,8 @@ const useStyles = makeStyles((theme) => ({
 	// },
 	typedContainer: {
 		// margin: theme.spacing(8),
-		alignItems: "top",
+		// paddingTop: "5rem",
+		alignItems: "center",
 		textAlign: "center",
 		height: "80vh",
 		// padding: "0 10%",
