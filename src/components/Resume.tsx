@@ -8,9 +8,10 @@ const useStyles = makeStyles((theme) => ({
 	mainContainer: {
 		background: "#234",
 		width: "100vw",
+		// paddingTop: "0",
 	},
 	heading: {
-		color: "orange",
+		color: "sandybrown",
 		// padding: "1rem 0 1rem",
 		paddingBottom: "1.2rem",
 		textTransform: "uppercase",
@@ -21,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
 		// padding: "1rem 0 0",
 		textTransform: "uppercase",
 		background: "lightgrey",
-		padding: "1em",
+		padding: "1.2em",
 		marginTop: "1rem",
 	},
 	heading2Title: {
@@ -44,14 +45,16 @@ const useStyles = makeStyles((theme) => ({
 
 		padding: ".5rem",
 		margin: "0 auto",
+		// backgroundColor: "pink",
 		"&:before": {
 			content: "''",
 			position: "absolute",
-			height: "99%",
+			height: "88%",
 			border: "1px solid lightgrey ",
 			right: "40px",
 			// top: "24px",
 			// top: 0,
+			transform: "translate(0px, 3.7rem)",
 		},
 		"&:after": {
 			content: "''",
@@ -64,7 +67,7 @@ const useStyles = makeStyles((theme) => ({
 
 			"&:before": {
 				transform: "translate(0px, 5rem)",
-				height: "85%",
+				height: "78%",
 				left: "calc(50% - 1px)",
 				right: "auto",
 				// zIndex: "-1",
@@ -79,9 +82,9 @@ const useStyles = makeStyles((theme) => ({
 	},
 	timeLineItem: {
 		padding: "1rem",
-		borderBottom: "2px solid tan",
+		// borderBottom: "8px solid tan",
 		position: "relative",
-		margin: "1rem 3rem 1rem 1rem",
+		margin: "1rem 3.3rem 1rem 1rem",
 		clear: "both",
 		"&:after": {
 			content: "''",
@@ -90,11 +93,11 @@ const useStyles = makeStyles((theme) => ({
 		"&:before": {
 			content: "''",
 			position: "absolute",
-			right: "-0.625rem",
+			right: "-0.025rem",
 			top: "calc(50% - 5px)",
 			borderStyle: "solid",
-			borderColor: "orange orange transparent transparent",
-			borderWidth: "0.625rem",
+			borderColor: "sandybrown sandybrown transparent transparent",
+			borderWidth: ".44rem",
 			transform: "rotate(45deg)",
 		},
 		[theme.breakpoints.up("md")]: {
@@ -108,17 +111,17 @@ const useStyles = makeStyles((theme) => ({
 			"&:nth-of-type(2n):before": {
 				right: "auto",
 				left: "-0.625rem",
-				borderColor: "transparent transparent orange orange",
+				borderColor: "transparent transparent sandybrown sandybrown",
 			},
 		},
 	},
 	timeLineYear: {
 		textAlign: "center",
-		maxWidth: "9.375rem",
+		maxWidth: "7rem",
 		margin: "0 3rem 0 auto",
 		fontSize: "1.8rem",
 		background: "grey",
-		color: "black",
+		color: "#234",
 		lineHeight: 1,
 		padding: "0.5rem 0 1rem",
 		// zIndex: "1",
@@ -142,7 +145,7 @@ const useStyles = makeStyles((theme) => ({
 		color: "cadetblue",
 	},
 	subHeadingE: {
-		color: "orange",
+		color: "sandybrown",
 		padding: "0",
 		textTransform: "uppercase",
 	},
@@ -152,13 +155,14 @@ const useStyles = makeStyles((theme) => ({
 
 		padding: ".5rem",
 		margin: "0 auto",
+		// backgroundColor: "purple",
 		"&:before": {
 			content: "''",
 			position: "absolute",
 			height: "99%",
 			border: "1px solid lightgrey ",
 			right: "40px",
-			// top: "24px",
+			// top: "44px",
 			// top: 0,
 		},
 		"&:after": {
@@ -169,28 +173,28 @@ const useStyles = makeStyles((theme) => ({
 		},
 		[theme.breakpoints.up("md")]: {
 			padding: "2rem",
+			// height: "99%",
 
 			"&:before": {
 				transform: "translate(0px, 5rem)",
-				height: "85%",
 				left: "calc(50% - 1px)",
 				right: "auto",
 				// zIndex: "-1",
 			},
-			// "&:after": {
-			// 	content: "''",
-			// 	height: "15%",
-			// 	clear: "both",
-			// 	// zIndex: "-1",
-			// },
+			"&:after": {
+				content: "''",
+				// height: "98%",
+				clear: "both",
+			},
 		},
 	},
 	timeLineItemE: {
 		padding: "1rem",
-		borderBottom: "2px solid tan",
+		// borderBottom: "2px solid tan",
 		position: "relative",
-		margin: "1rem 3rem 1rem 1rem",
+		margin: "1rem 3.3rem 1rem 1rem",
 		clear: "both",
+		// backgroundColor: "white",
 		"&:after": {
 			content: "''",
 			position: "absolute",
@@ -198,11 +202,11 @@ const useStyles = makeStyles((theme) => ({
 		"&:before": {
 			content: "''",
 			position: "absolute",
-			right: "-0.625rem",
+			right: "-0.025rem",
 			top: "calc(50% - 5px)",
 			borderStyle: "solid",
-			borderColor: "grey grey transparent transparent",
-			borderWidth: "0.625rem",
+			borderColor: "cadetblue cadetblue transparent transparent",
+			borderWidth: "0.44rem",
 			transform: "rotate(45deg)",
 		},
 		[theme.breakpoints.up("md")]: {
@@ -222,7 +226,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 	timeLineYearE: {
 		textAlign: "center",
-		maxWidth: "9.375rem",
+		maxWidth: "7rem",
 		margin: "0 3rem 0 auto",
 		fontSize: "1.8rem",
 		background: "#234",
@@ -250,7 +254,7 @@ const useStyles = makeStyles((theme) => ({
 		display: "flex",
 		// justify: "space-evenly",
 		width: "100vw",
-		padding: "1.2em 0 2em",
+		padding: "1.2em 0 1.5em",
 		alignItems: "flex-start",
 		// backgroundColor: "purple",
 		// wrap: "wrap",
@@ -285,7 +289,7 @@ const useStyles = makeStyles((theme) => ({
 
 	experienceBox: {
 		paddingTop: "1.2rem",
-		paddingBottom: "6rem",
+		paddingBottom: "18rem",
 		backgroundColor: "white",
 		textTransform: "uppercase",
 		color: "#234",
@@ -752,18 +756,18 @@ const Resume = () => {
 								style={{ color: "grey" }}
 							>
 								<div>
-									Filled in as manager when needed -
+									• Filled in as manager when needed -
 									responsibilities included resolving customer
 									issues, entering shift reports, and taking
 									inventory
 								</div>
 								<div>
-									Developed valuable soft skills, which
+									• Developed valuable soft skills, which
 									included communication, teamwork,
 									multitasking, and working under pressure
 								</div>
 								<div>
-									Trained new hires and created training
+									• Trained new hires and created training
 									materials along with a checklist of server
 									side-duties
 								</div>
@@ -787,14 +791,16 @@ const Resume = () => {
 								variant="h6"
 								align="center"
 								className={classes.subHeading2E}
-								// style="{{ color: "tan"}}
 							>
 								IT Recruiter
 							</Typography>
 							<Typography
 								variant="body1"
 								align="center"
-								style={{ color: "#234" }}
+								style={{
+									color: "#234",
+									// backgroundColor: "white",
+								}}
 							>
 								Atlanta, GA
 							</Typography>
@@ -802,15 +808,18 @@ const Resume = () => {
 							<Typography
 								variant="subtitle1"
 								align="left"
-								style={{ color: "grey" }}
+								style={{
+									color: "grey",
+									// backgroundColor: "yellow",
+								}}
 							>
 								<div>
-									Performed full sles recruiting lifecycle -
+									• Performed full sles recruiting lifecycle -
 									from prospecting, job selling, screening,
 									offer negotiation, and onboarding
 								</div>
 								<div>
-									Maintained an accurate candidate tracking
+									• Maintained an accurate candidate tracking
 									system
 								</div>
 							</Typography>
