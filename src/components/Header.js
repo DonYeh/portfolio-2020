@@ -1,6 +1,6 @@
 import React from "react";
 import { Typography, Avatar, Grid, Box, CssBaseline } from "@material-ui/core/";
-import avatar from "../images/Boone.png";
+// import avatar from "../images/Boone.png";
 import Typed from "react-typed";
 import { makeStyles } from "@material-ui/core/styles";
 import { ViewColumn } from "@material-ui/icons";
@@ -11,33 +11,33 @@ const useStyles = makeStyles((theme) => ({
 		// direction: "column",
 		alignContent: "flex-start",
 	},
-	avatarContainer: {
-		// width: "100%",
-		// margin: "auto",
-		// width: theme.spacing(12),
-		height: "20vh",
-		// margin:
-		// backgroundColor: "white",
-		// margin: "30px 0px 0px 0px",
-		// backgroundColor: "red",
-		// textAlign: "center",
+	// avatarContainer: {
+	// width: "100%",
+	// margin: "auto",
+	// width: theme.spacing(12),
+	// height: "20vh",
+	// margin:
+	// backgroundColor: "white",
+	// margin: "30px 0px 0px 0px",
+	// backgroundColor: "red",
+	// textAlign: "center",
 
-		// maxWidth: "100%",
-	},
-	avatar: {
-		textAlign: "center",
-		width: theme.spacing(14),
-		height: theme.spacing(14),
-		// margin: theme.spacing(6),
-		// textAlign: "center",
-		// border: "black",
-		// maxWidth: "50%",
-		// margin: theme.spacing(2),
-		// alignItems: "center",
-		// justifyContent: "center",
-		// backgroundColor: "purple",
-		// margin: "auto",
-	},
+	// maxWidth: "100%",
+	// },
+	// avatar: {
+	// 	textAlign: "center",
+	// 	width: theme.spacing(14),
+	// 	height: theme.spacing(14),
+	// margin: theme.spacing(6),
+	// textAlign: "center",
+	// border: "black",
+	// maxWidth: "50%",
+	// margin: theme.spacing(2),
+	// alignItems: "center",
+	// justifyContent: "center",
+	// backgroundColor: "purple",
+	// margin: "auto",
+	// },
 	// boxContainer: {
 	// 	flexDirection: "column",
 	// 	alignContent: "stretch",
@@ -97,12 +97,12 @@ const Header = () => {
 					className={classes.avatarContainer}
 					// style={{ background: "purple" }}
 				>
-					<Avatar
+					{/* <Avatar
 						src={avatar}
 						alt="Doggie"
 						className={classes.avatar}
 						// style={{ paddingTop: ".5em" }}
-					/>
+					/> */}
 				</Grid>
 
 				<Grid

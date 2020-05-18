@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "./Navbar";
 import { makeStyles } from "@material-ui/core/styles";
 import { Typography, Box, Paper, Grid, Card } from "@material-ui/core";
-import { FullscreenExit } from "@material-ui/icons";
+// import { FullscreenExit } from "@material-ui/icons";
 
 const useStyles = makeStyles((theme) => ({
 	mainContainer: {
