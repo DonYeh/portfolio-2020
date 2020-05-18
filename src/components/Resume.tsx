@@ -159,7 +159,7 @@ const useStyles = makeStyles((theme) => ({
 		"&:before": {
 			content: "''",
 			position: "absolute",
-			height: "55%",
+			height: "43%",
 			border: "1px solid lightgrey ",
 			right: "40px",
 			// top: "44px",
@@ -176,7 +176,8 @@ const useStyles = makeStyles((theme) => ({
 			// height: "99%",
 
 			"&:before": {
-				transform: "translate(0px, 2.5rem)",
+				transform: "translate(0px, 1.6rem)",
+				height: "46%",
 				left: "calc(50% - 1px)",
 				right: "auto",
 				// zIndex: "-1",

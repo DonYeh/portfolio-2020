@@ -14,7 +14,15 @@ import {
 	Box,
 } from "@material-ui/core";
 
-import { AssignmentInd, Home, Apps, ContactMail } from "@material-ui/icons";
+import {
+	AssignmentInd,
+	Home,
+	Apps,
+	ContactMail,
+	InfoOutlined,
+} from "@material-ui/icons";
+
+// import { mdiInformation } from '@mdi/js';
 
 import MenuIcon from "@material-ui/icons/Menu";
 
@@ -73,6 +81,11 @@ const menuIcons = [
 		listIcon: <Home />,
 		listText: "Home",
 		listPath: "/",
+	},
+	{
+		listIcon: <InfoOutlined />,
+		listText: "About me",
+		listPath: "/about",
 	},
 	{
 		listIcon: <AssignmentInd />,
