@@ -151,7 +151,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 	timeLineBoxE: {
 		postion: "relative",
-		transform: "translate(0px, 1.0rem)",
+		// transform: "translate(0px, .5rem)",
 
 		padding: ".5rem",
 		margin: "0 auto",
@@ -159,7 +159,7 @@ const useStyles = makeStyles((theme) => ({
 		"&:before": {
 			content: "''",
 			position: "absolute",
-			height: "99%",
+			height: "55%",
 			border: "1px solid lightgrey ",
 			right: "40px",
 			// top: "44px",
@@ -176,7 +176,7 @@ const useStyles = makeStyles((theme) => ({
 			// height: "99%",
 
 			"&:before": {
-				transform: "translate(0px, 5rem)",
+				transform: "translate(0px, 2.5rem)",
 				left: "calc(50% - 1px)",
 				right: "auto",
 				// zIndex: "-1",
@@ -293,7 +293,7 @@ const useStyles = makeStyles((theme) => ({
 		textTransform: "uppercase",
 		color: "#234",
 		[theme.breakpoints.up("md")]: {
-			paddingBottom: "18rem",
+			paddingBottom: "19rem",
 
 			// "&:before": {
 			// 	transform: "translate(0px, 5rem)",
