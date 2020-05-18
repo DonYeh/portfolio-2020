@@ -16,13 +16,13 @@ const useStyles = makeStyles((theme) => ({
 		textTransform: "uppercase",
 		// zIndex: "1",
 	},
-	heading2: {
+	boxTechnologies: {
 		// color: "cadetblue",
 		// padding: "1rem 0 0",
 		textTransform: "uppercase",
 		background: "lightgrey",
-		paddingTop: ".5em",
-		margin: ".5rem",
+		padding: "1em",
+		marginTop: "1rem",
 	},
 	heading2Title: {
 		paddingTop: ".75rem",
@@ -38,10 +38,11 @@ const useStyles = makeStyles((theme) => ({
 		padding: "0",
 		textTransform: "uppercase",
 	},
-	timeLine: {
+	timeLineBox: {
 		postion: "relative",
 		transform: "translate(0px, 1.5rem)",
-		padding: "1rem",
+
+		padding: ".5rem",
 		margin: "0 auto",
 		"&:before": {
 			content: "''",
@@ -60,6 +61,7 @@ const useStyles = makeStyles((theme) => ({
 		},
 		[theme.breakpoints.up("md")]: {
 			padding: "2rem",
+
 			"&:before": {
 				transform: "translate(0px, 5rem)",
 				height: "85%",
@@ -136,15 +138,124 @@ const useStyles = makeStyles((theme) => ({
 			},
 		},
 	},
-	paperGridContainer: {
+	subHeading2E: {
+		color: "cadetblue",
+	},
+	subHeadingE: {
+		color: "orange",
+		padding: "0",
+		textTransform: "uppercase",
+	},
+	timeLineBoxE: {
+		postion: "relative",
+		transform: "translate(0px, 1.5rem)",
+
+		padding: ".5rem",
+		margin: "0 auto",
+		"&:before": {
+			content: "''",
+			position: "absolute",
+			height: "99%",
+			border: "1px solid lightgrey ",
+			right: "40px",
+			// top: "24px",
+			// top: 0,
+		},
+		"&:after": {
+			content: "''",
+			// position: "absolute",
+			// top: "60px",
+			// clear: "both",
+		},
+		[theme.breakpoints.up("md")]: {
+			padding: "2rem",
+
+			"&:before": {
+				transform: "translate(0px, 5rem)",
+				height: "85%",
+				left: "calc(50% - 1px)",
+				right: "auto",
+				// zIndex: "-1",
+			},
+			// "&:after": {
+			// 	content: "''",
+			// 	height: "15%",
+			// 	clear: "both",
+			// 	// zIndex: "-1",
+			// },
+		},
+	},
+	timeLineItemE: {
+		padding: "1rem",
+		borderBottom: "2px solid tan",
+		position: "relative",
+		margin: "1rem 3rem 1rem 1rem",
+		clear: "both",
+		"&:after": {
+			content: "''",
+			position: "absolute",
+		},
+		"&:before": {
+			content: "''",
+			position: "absolute",
+			right: "-0.625rem",
+			top: "calc(50% - 5px)",
+			borderStyle: "solid",
+			borderColor: "grey grey transparent transparent",
+			borderWidth: "0.625rem",
+			transform: "rotate(45deg)",
+		},
+		[theme.breakpoints.up("md")]: {
+			width: "44%",
+			margin: "1rem",
+			"&:nth-of-type(2n)": {
+				float: "right",
+				margin: "1rem",
+				borderColor: "tan",
+			},
+			"&:nth-of-type(2n):before": {
+				right: "auto",
+				left: "-0.625rem",
+				borderColor: "transparent transparent cadetblue cadetblue",
+			},
+		},
+	},
+	timeLineYearE: {
+		textAlign: "center",
+		maxWidth: "9.375rem",
+		margin: "0 3rem 0 auto",
+		fontSize: "1.8rem",
+		background: "#234",
+		color: "lightgrey",
+		lineHeight: 1,
+		padding: "0.5rem 0 1rem",
+		// zIndex: "1",
+		"&:before": {
+			display: "none",
+		},
+		[theme.breakpoints.up("md")]: {
+			textAlign: "center",
+			margin: "0 auto",
+			zIndex: "1",
+			"&:nth-of-type(2n)": {
+				float: "none",
+				margin: "0 auto",
+			},
+			"&:nth-of-type(2n):before": {
+				display: "none",
+			},
+		},
+	},
+	papersGridContainer: {
 		display: "flex",
 		// justify: "space-evenly",
-		padding: "2em",
-		alignItems: "center",
+		width: "100vw",
+		padding: "1.2em 0 2em",
+		alignItems: "flex-start",
 		// backgroundColor: "purple",
 		// wrap: "wrap",
 		// gridItem: {
-		// 	background: "black",
+		// background: "black",
 	},
 	frontEndGridItem: {
 		// display: "flex",
@@ -163,17 +274,22 @@ const useStyles = makeStyles((theme) => ({
 		alignItems: "center",
 	},
 	paper: {
-		color: "teal",
+		color: "cadetblue",
+		fontSize: "1.2em",
 		textAlign: "center",
-		padding: "theme.spacing(2.3)",
+		padding: "theme.spacing(3)",
 		overflow: "hidden",
 		textOverflow: "ellipsis",
 		// width: "1rem",
 	},
 
-	// paperDiv: {
-	// 	textOverflow: "ellipsis",
-	// },
+	experienceBox: {
+		paddingTop: "1.2rem",
+		paddingBottom: "6rem",
+		backgroundColor: "white",
+		textTransform: "uppercase",
+		color: "#234",
+	},
 }));
 
 const Resume = () => {
@@ -184,7 +300,7 @@ const Resume = () => {
 			<Navbar />
 			{/* <div>Resume here - tsx</div> */}
 			<Box component="header" className={classes.mainContainer}>
-				<Box component="div" className={classes.timeLine}>
+				<Box component="div" className={classes.timeLineBox}>
 					<Typography
 						variant="h4"
 						align="center"
@@ -310,7 +426,10 @@ const Resume = () => {
 						</Typography>
 					</Box>
 				</Box>
-				<Box className={classes.heading2}>
+				<Box
+					className={classes.boxTechnologies}
+					justifyContent="center"
+				>
 					<Typography
 						variant="h4"
 						align="center"
@@ -324,15 +443,16 @@ const Resume = () => {
 						container
 						spacing={4}
 						justify="space-evenly"
+						// alignItems="flex-start"
 						// alignContent="space-around"
-						className={classes.paperGridContainer}
+						className={classes.papersGridContainer}
 						wrap="wrap"
 						// style={{ backgroundColor: "purple" }}
 					>
 						<Grid
 							item
 							container
-							xs={10}
+							xs={12}
 							sm={6}
 							md={4}
 							spacing={2}
@@ -347,7 +467,7 @@ const Resume = () => {
 									className={classes.paper}
 									// square
 								>
-									<div>html</div>
+									html
 								</Paper>
 							</Grid>
 							<Grid item xs={4} sm={4} md={4}>
@@ -357,7 +477,7 @@ const Resume = () => {
 									className={classes.paper}
 									// square
 								>
-									<div>css</div>
+									css
 								</Paper>
 							</Grid>
 							<Grid item xs={4} sm={4} md={4}>
@@ -367,7 +487,7 @@ const Resume = () => {
 									className={classes.paper}
 									// square
 								>
-									<div>html5</div>
+									html5
 								</Paper>
 							</Grid>
 							<Grid item xs={4} sm={4} md={4}>
@@ -377,7 +497,7 @@ const Resume = () => {
 									className={classes.paper}
 									// square
 								>
-									<div>css</div>
+									css
 								</Paper>
 							</Grid>
 							<Grid item xs={4} sm={4} md={4}>
@@ -387,7 +507,7 @@ const Resume = () => {
 									className={classes.paper}
 									// square
 								>
-									<div>html</div>
+									html
 								</Paper>
 							</Grid>
 							<Grid item xs={4} sm={4} md={4}>
@@ -397,7 +517,7 @@ const Resume = () => {
 									className={classes.paper}
 									// square
 								>
-									<div>css</div>
+									css
 								</Paper>
 							</Grid>
 							<Grid item xs={4} sm={4} md={4}>
@@ -407,7 +527,7 @@ const Resume = () => {
 									className={classes.paper}
 									// square
 								>
-									<div>html</div>
+									html
 								</Paper>
 							</Grid>
 							<Grid item xs={4} sm={4} md={4}>
@@ -417,14 +537,14 @@ const Resume = () => {
 									className={classes.paper}
 									// square
 								>
-									<div>css</div>
+									css
 								</Paper>
 							</Grid>
 						</Grid>
 
 						<Grid
 							item
-							xs={10}
+							xs={12}
 							sm={6}
 							md={4}
 							container
@@ -496,7 +616,7 @@ const Resume = () => {
 						</Grid>
 						<Grid
 							item
-							xs={10}
+							xs={12}
 							sm={6}
 							md={4}
 							container
@@ -589,6 +709,113 @@ const Resume = () => {
 						</Grid>
 						{/* </Grid> */}
 					</Grid>
+				</Box>
+				<Box className={classes.experienceBox}>
+					<Typography variant="h4" align="center">
+						Experience
+					</Typography>
+					<Box component="div" className={classes.timeLineBoxE}>
+						<Typography
+							variant="h2"
+							className={`${classes.timeLineYearE} ${classes.timeLineItemE}`}
+						>
+							2020
+						</Typography>
+
+						<Box component="div" className={classes.timeLineItemE}>
+							<Typography
+								variant="h5"
+								align="center"
+								className={classes.subHeadingE}
+							>
+								Ton Ton Ramen & Yakitori
+							</Typography>
+							<Typography
+								variant="h6"
+								align="center"
+								className={classes.subHeading2E}
+								// style="{{ color: "tan"}}
+							>
+								server
+							</Typography>
+							<Typography
+								variant="body1"
+								align="center"
+								style={{ color: "#234" }}
+							>
+								Atlanta, GA
+							</Typography>
+
+							<Typography
+								variant="subtitle1"
+								align="left"
+								style={{ color: "grey" }}
+							>
+								<div>
+									Filled in as manager when needed -
+									responsibilities included resolving customer
+									issues, entering shift reports, and taking
+									inventory
+								</div>
+								<div>
+									Developed valuable soft skills, which
+									included communication, teamwork,
+									multitasking, and working under pressure
+								</div>
+								<div>
+									Trained new hires and created training
+									materials along with a checklist of server
+									side-duties
+								</div>
+							</Typography>
+						</Box>
+						<Typography
+							variant="h2"
+							className={`${classes.timeLineYearE} ${classes.timeLineItemE}`}
+						>
+							2018
+						</Typography>
+						<Box component="div" className={classes.timeLineItemE}>
+							<Typography
+								variant="h5"
+								align="center"
+								className={classes.subHeadingE}
+							>
+								Elev8 Hire Solutions{" "}
+							</Typography>
+							<Typography
+								variant="h6"
+								align="center"
+								className={classes.subHeading2E}
+								// style="{{ color: "tan"}}
+							>
+								IT Recruiter
+							</Typography>
+							<Typography
+								variant="body1"
+								align="center"
+								style={{ color: "#234" }}
+							>
+								Atlanta, GA
+							</Typography>
+
+							<Typography
+								variant="subtitle1"
+								align="left"
+								style={{ color: "grey" }}
+							>
+								<div>
+									Performed full sles recruiting lifecycle -
+									from prospecting, job selling, screening,
+									offer negotiation, and onboarding
+								</div>
+								<div>
+									Maintained an accurate candidate tracking
+									system
+								</div>
+							</Typography>
+						</Box>
+					</Box>
 				</Box>
 			</Box>
 		</>
