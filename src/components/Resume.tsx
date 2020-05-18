@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
 		// padding: "1rem 0 0",
 		textTransform: "uppercase",
 		background: "lightgrey",
-		paddingTop: ".3em",
+		paddingTop: ".5em",
 		margin: ".5rem",
 	},
 	heading2Title: {
@@ -136,12 +136,6 @@ const useStyles = makeStyles((theme) => ({
 			},
 		},
 	},
-	// technologiesGridContainer: {
-	// 	display: "flex",
-	// 	backgroundColor: "yellow",
-	// 	justify: "space-evenly",
-	// 	padding: "1em",
-	// },
 	paperGridContainer: {
 		display: "flex",
 		// justify: "space-evenly",
@@ -172,7 +166,14 @@ const useStyles = makeStyles((theme) => ({
 		color: "teal",
 		textAlign: "center",
 		padding: "theme.spacing(2.3)",
+		overflow: "hidden",
+		textOverflow: "ellipsis",
+		// width: "1rem",
 	},
+
+	// paperDiv: {
+	// 	textOverflow: "ellipsis",
+	// },
 }));
 
 const Resume = () => {
@@ -330,10 +331,10 @@ const Resume = () => {
 					>
 						<Grid
 							item
+							container
 							xs={10}
 							sm={6}
 							md={4}
-							container
 							spacing={2}
 							className={classes.frontEndGridItem}
 						>
@@ -341,7 +342,7 @@ const Resume = () => {
 							<Typography align="center">Front End</Typography>
 							<Grid item xs={4} sm={4} md={4}>
 								<Paper
-									elevation={2}
+									elevation={3}
 									variant="outlined"
 									className={classes.paper}
 									// square
@@ -351,7 +352,7 @@ const Resume = () => {
 							</Grid>
 							<Grid item xs={4} sm={4} md={4}>
 								<Paper
-									elevation={2}
+									elevation={3}
 									variant="outlined"
 									className={classes.paper}
 									// square
@@ -459,7 +460,7 @@ const Resume = () => {
 									className={classes.paper}
 									// square
 								>
-									<div>Python</div>
+									Python
 								</Paper>
 							</Grid>
 							<Grid item xs={4} sm={4} md={4}>
@@ -469,7 +470,7 @@ const Resume = () => {
 									className={classes.paper}
 									// square
 								>
-									<div>PostgreSQL</div>
+									PostgreSQL
 								</Paper>
 							</Grid>
 							<Grid item xs={4} sm={4} md={4}>
@@ -479,7 +480,7 @@ const Resume = () => {
 									className={classes.paper}
 									// square
 								>
-									<div>SQL</div>
+									SQL
 								</Paper>
 							</Grid>
 							<Grid item xs={4} sm={4} md={4}>
@@ -489,7 +490,7 @@ const Resume = () => {
 									className={classes.paper}
 									// square
 								>
-									<div>html</div>
+									html
 								</Paper>
 							</Grid>
 						</Grid>
@@ -511,7 +512,7 @@ const Resume = () => {
 									className={classes.paper}
 									// square
 								>
-									<div>VS Code</div>
+									VS Code
 								</Paper>
 							</Grid>
 							<Grid item xs={4} sm={4} md={4}>
@@ -521,7 +522,7 @@ const Resume = () => {
 									className={classes.paper}
 									// square
 								>
-									<div>AWS</div>
+									AWS
 								</Paper>
 							</Grid>
 							<Grid item xs={4} sm={4} md={4}>
@@ -531,7 +532,7 @@ const Resume = () => {
 									className={classes.paper}
 									// square
 								>
-									<div>html</div>
+									html
 								</Paper>
 							</Grid>
 							<Grid item xs={4} sm={4} md={4}>
@@ -541,7 +542,7 @@ const Resume = () => {
 									className={classes.paper}
 									// square
 								>
-									<div>Git</div>
+									Git
 								</Paper>
 							</Grid>
 							<Grid item xs={4} sm={4} md={4}>
@@ -551,7 +552,7 @@ const Resume = () => {
 									className={classes.paper}
 									// square
 								>
-									<div>Mocha</div>
+									Mocha
 								</Paper>
 							</Grid>
 							<Grid item xs={4} sm={4} md={4}>
@@ -561,7 +562,7 @@ const Resume = () => {
 									className={classes.paper}
 									// square
 								>
-									<div>css</div>
+									css
 								</Paper>
 							</Grid>
 
@@ -572,7 +573,7 @@ const Resume = () => {
 									className={classes.paper}
 									// square
 								>
-									<div>css</div>
+									css
 								</Paper>
 							</Grid>
 							<Grid item xs={4} sm={4} md={4}>
