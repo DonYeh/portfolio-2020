@@ -159,7 +159,7 @@ const useStyles = makeStyles((theme) => ({
 		"&:before": {
 			content: "''",
 			position: "absolute",
-			height: "43%",
+			height: "69%",
 			border: "1px solid lightgrey ",
 			right: "40px",
 			// top: "44px",
@@ -167,6 +167,7 @@ const useStyles = makeStyles((theme) => ({
 		},
 		"&:after": {
 			content: "''",
+			height: "87%",
 			// position: "absolute",
 			// top: "60px",
 			// clear: "both",
@@ -177,7 +178,7 @@ const useStyles = makeStyles((theme) => ({
 
 			"&:before": {
 				transform: "translate(0px, 1.6rem)",
-				height: "46%",
+				height: "66%",
 				left: "calc(50% - 1px)",
 				right: "auto",
 				// zIndex: "-1",
@@ -834,6 +835,11 @@ const Resume = () => {
 									• Performed full sles recruiting lifecycle -
 									from prospecting, job selling, screening,
 									offer negotiation, and onboarding
+								</div>
+								<div>
+									• Communicated with hiring managers to
+									discover project requirements and ideal
+									candidates
 								</div>
 								<div>
 									• Maintained an accurate candidate tracking
