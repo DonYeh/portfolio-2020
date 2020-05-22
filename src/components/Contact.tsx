@@ -1,7 +1,7 @@
+import { Button, TextField } from "@material-ui/core";
+import { Form, Formik } from "formik";
 import * as React from "react";
-import { TextField } from "@material-ui/core";
 import Navbar from "./Navbar";
-import { Formik, Form } from "formik";
 
 interface Values {
 	firstName: string;
@@ -25,27 +25,36 @@ const Contact: React.FC<Props> = ({ onSubmit }) => {
 				{
 					({ values, handleChange, handleBlur }) => (
 						<Form>
-							<TextField
-								name="firstName"
-								placeholder="first name"
-								value={values.firstName}
-								onChange={handleChange}
-								onBlur={handleBlur}
-							/>
-							<TextField
-								name="lastName"
-								placeholder="last name"
-								value={values.lastName}
-								onChange={handleChange}
-								onBlur={handleBlur}
-							/>
-							<TextField
-								name="email"
-								placeholder="email"
-								value={values.email}
-								onChange={handleChange}
-								onBlur={handleBlur}
-							/>
+							<div>
+								<TextField
+									name="firstName"
+									placeholder="first name"
+									value={values.firstName}
+									onChange={handleChange}
+									onBlur={handleBlur}
+								/>
+							</div>
+
+							<div>
+								<TextField
+									name="lastName"
+									placeholder="last name"
+									value={values.lastName}
+									onChange={handleChange}
+									onBlur={handleBlur}
+								/>
+							</div>
+
+							<div>
+								<TextField
+									name="email"
+									placeholder="email"
+									value={values.email}
+									onChange={handleChange}
+									onBlur={handleBlur}
+								/>
+							</div>
+							<Button type="submit">submit</Button>
 							<pre>{JSON.stringify(values, null, 2)}</pre>
 						</Form>
 					)
