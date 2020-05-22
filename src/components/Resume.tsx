@@ -153,13 +153,13 @@ const useStyles = makeStyles((theme) => ({
 		postion: "relative",
 		// transform: "translate(0px, .5rem)",
 
-		padding: ".5rem",
+		padding: "1.3rem",
 		margin: "0 auto",
 		// backgroundColor: "purple",
 		"&:before": {
 			content: "''",
 			position: "absolute",
-			height: "69%",
+			height: "94%",
 			border: "1px solid lightgrey ",
 			right: "40px",
 			// top: "44px",
@@ -173,19 +173,19 @@ const useStyles = makeStyles((theme) => ({
 			// clear: "both",
 		},
 		[theme.breakpoints.up("md")]: {
-			padding: "2rem",
+			padding: "1rem",
 			// height: "99%",
 
 			"&:before": {
-				transform: "translate(0px, 1.6rem)",
-				height: "66%",
+				transform: "translate(0px, .6rem)",
+				height: "86%",
 				left: "calc(50% - 1px)",
 				right: "auto",
 				// zIndex: "-1",
 			},
 			"&:after": {
 				content: "''",
-				// height: "98%",
+				height: "98%",
 				clear: "both",
 			},
 		},
@@ -234,7 +234,7 @@ const useStyles = makeStyles((theme) => ({
 		background: "#234",
 		color: "lightgrey",
 		lineHeight: 1,
-		padding: "0.5rem 0 1rem",
+		padding: "0.5rem 0 .5rem",
 		// zIndex: "1",
 		"&:before": {
 			display: "none",
@@ -290,26 +290,26 @@ const useStyles = makeStyles((theme) => ({
 	},
 	experienceBox: {
 		paddingTop: "1.2rem",
-		paddingBottom: "2.5rem",
+		paddingBottom: "4rem",
 		backgroundColor: "white",
 		textTransform: "uppercase",
 		color: "#234",
 		[theme.breakpoints.up("md")]: {
 			paddingBottom: "19rem",
 
-			// "&:before": {
-			// 	transform: "translate(0px, 5rem)",
-			// 	height: "78%",
-			// 	left: "calc(50% - 1px)",
-			// 	right: "auto",
-			// 	// zIndex: "-1",
-			// },
-			// "&:after": {
-			// 	content: "''",
-			// 	height: "15%",
-			// 	clear: "both",
-			// 	// zIndex: "-1",
-			// },
+			"&:before": {
+				transform: "translate(0px, 5rem)",
+				height: "78%",
+				left: "calc(50% - 1px)",
+				right: "auto",
+				// zIndex: "-1",
+			},
+			"&:after": {
+				content: "''",
+				height: "15%",
+				clear: "both",
+				// zIndex: "-1",
+			},
 		},
 	},
 }));
