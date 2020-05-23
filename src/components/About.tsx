@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
 	gridContainer: {
 		display: "flex",
 		justify: "center",
-		alignItems: "center",
+		// alignContent: "center",
 	},
 	gridItems: {
 		padding: "5rem",

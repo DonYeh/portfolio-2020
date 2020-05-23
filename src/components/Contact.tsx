@@ -33,6 +33,8 @@ const useStyles = makeStyles({
 		// width: "100vw",
 		height: "100vh",
 		background: "aliceblue",
+		// padding: "1rem",
+		// margin: "1rem",
 	},
 	gridItem: {
 		background: "white",
@@ -87,7 +89,7 @@ const Contact: React.FC<Props> = ({ onSubmit }) => {
 										<div>
 											<Field
 												name="firstName"
-												placeholder="first name"
+												// placeholder="first name"
 												component={MyField}
 												label="first name"
 											/>
@@ -104,7 +106,7 @@ const Contact: React.FC<Props> = ({ onSubmit }) => {
 										<div>
 											<Field
 												name="lastName"
-												placeholder="last name"
+												// placeholder="last name"
 												component={MyField}
 												label="last name"
 											/>
@@ -120,7 +122,7 @@ const Contact: React.FC<Props> = ({ onSubmit }) => {
 										<div>
 											<Field
 												name="email"
-												placeholder="email"
+												// placeholder="email"
 												component={MyField}
 												label="email"
 											/>

@@ -12,12 +12,12 @@ import { FullscreenExit } from "@material-ui/icons";
 
 const useStyles = makeStyles({
 	root: {
-		maxWidth: 345,
-		background: "lightgrey",
+		maxWidth: 350,
+		// background: "white",
 	},
 	mainGridContainer: {
 		display: "flex",
-		background: "lightgrey",
+		background: "black",
 		alignItems: "center",
 	},
 	proj1: {},
