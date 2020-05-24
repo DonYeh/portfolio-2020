@@ -6,11 +6,16 @@ import {
 	Paper,
 	Typography,
 } from "@material-ui/core";
+import Link from "@material-ui/core/Link";
+
 import { Form, Formik, Field } from "formik";
 import * as React from "react";
 import Navbar from "./Navbar";
 import { MyField } from "./MyField";
 import { makeStyles } from "@material-ui/core/styles";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import GitHubIcon from "@material-ui/icons/GitHub";
+import TwitterIcon from "@material-ui/icons/Twitter";
 
 interface Values {
 	firstName: string;
@@ -50,6 +55,8 @@ const useStyles = makeStyles({
 
 const Contact: React.FC<Props> = ({ onSubmit }) => {
 	const classes = useStyles();
+	const preventDefault = (event: React.SyntheticEvent) =>
+		event.preventDefault();
 
 	return (
 		<>
@@ -66,8 +73,8 @@ const Contact: React.FC<Props> = ({ onSubmit }) => {
 						<Typography>Let's build together</Typography>
 						<Typography>
 							Have a project you're looking to get off the ground?
-							I'd love to hear from you. Send a message to
-							email.com to get the ball rolling.
+							I'd love to hear from you. Send a message to get the
+							ball rolling.
 						</Typography>
 					</Paper>
 				</Grid>
@@ -78,6 +85,7 @@ const Contact: React.FC<Props> = ({ onSubmit }) => {
 								firstName: "",
 								lastName: "",
 								email: "",
+								message: "",
 							}}
 							onSubmit={(values) => {
 								onSubmit(values);
@@ -89,7 +97,6 @@ const Contact: React.FC<Props> = ({ onSubmit }) => {
 										<div>
 											<Field
 												name="firstName"
-												// placeholder="first name"
 												component={MyField}
 												label="first name"
 											/>
@@ -106,7 +113,6 @@ const Contact: React.FC<Props> = ({ onSubmit }) => {
 										<div>
 											<Field
 												name="lastName"
-												// placeholder="last name"
 												component={MyField}
 												label="last name"
 											/>
@@ -122,9 +128,22 @@ const Contact: React.FC<Props> = ({ onSubmit }) => {
 										<div>
 											<Field
 												name="email"
-												// placeholder="email"
 												component={MyField}
 												label="email"
+											/>
+											{/* <TextField
+									name="email"
+									placeholder="email"
+									value={values.email}
+									onChange={handleChange}
+									onBlur={handleBlur}
+								/> */}
+										</div>
+										<div>
+											<Field
+												name="message"
+												component={MyField}
+												label="message"
 											/>
 											{/* <TextField
 									name="email"
@@ -148,6 +167,38 @@ const Contact: React.FC<Props> = ({ onSubmit }) => {
 								// <div>Contact me herrrrrreee</div>
 							}
 						</Formik>
+					</Paper>
+				</Grid>
+				<Grid item xs={12} className={classes.gridItem}>
+					<Paper className={classes.paper}>
+						<Typography>Let's Connect</Typography>
+						<Typography>
+							Social media links here
+							<Link
+								href="https://www.linkedin.com/in/donald-yeh-b3b1426/"
+								// onClick={preventDefault}
+								variant="body2"
+							>
+								{/* {'variant="body2"'} */}
+								<LinkedInIcon />
+							</Link>
+							<Link
+								href="https://github.com/DonYeh"
+								// onClick={preventDefault}
+								variant="body2"
+							>
+								{/* {'variant="body2"'} */}
+								<GitHubIcon />
+							</Link>
+							<Link
+								href="https://twitter.com/heydonaldyeh"
+								// onClick={preventDefault}
+								variant="body2"
+							>
+								{/* {'variant="body2"'} */}
+								<TwitterIcon />
+							</Link>
+						</Typography>
 					</Paper>
 				</Grid>
 			</Grid>

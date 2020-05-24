@@ -17,7 +17,7 @@ const useStyles = makeStyles({
 	},
 	mainGridContainer: {
 		display: "flex",
-		background: "black",
+		// background: "black",
 		alignItems: "center",
 	},
 	proj1: {},
@@ -32,8 +32,9 @@ export default function ImgMediaCard() {
 			<Grid
 				className="mainGridContainer"
 				container
-				spacing={2}
+				spacing={3}
 				justify="center"
+				alignContent="center"
 			>
 				<Grid item>
 					<Box className="proj1">
